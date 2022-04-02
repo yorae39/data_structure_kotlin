@@ -1,0 +1,34 @@
+LINKED LIST:
+Uma lista encadeada ou lista ligada é uma estrutura de dados linear e dinâmica.
+Ela é composta por várias células que estão interligadas através de ponteiros, ou seja,
+cada célula possui um ponteiro que aponta para o endereço de memória da próxima célula.
+Desse modo, as células da estrutura não precisam estar em posições contíguas da memória.
+Isso faz com que a estrutura se torne dinâmica, pois há qualquer momento, é possível alocar
+uma nova célula e mudar os ponteiros das células já existentes, de modo que a nova célula seja
+inserida na estrutura com êxito, na posição desejada pelo programador.
+
+Exemplo:
+
+     data   next             data   next            data   next             data   next
+    +-----------+           +-----------+          +-----------+           +-----------+
+    |   3  |    |---------->|  10  |    |--------->|   2  |    |---------->|   1  |    |
+    +-----------+           +-----------+          +-----------+           +-----------+
+        ^
+        |
+        |
+        |
+   +-----------+
+   |   HEAD    |
+   +-----------+
+
+
+EXERCÍCIOS:
+
+1 - Crie uma função de extensão que imprima os elementos de uma lista ligada na ordem inversa.
+2 - Crie uma função que retorne o nó do meio de uma lista ligada
+3 - Crie uma função que reverta uma lista ligada
+4 - Crie uma função que pegue duas listas ligadas classificadas e as mescle em uma única lista ligada classificada
+
+
+
+

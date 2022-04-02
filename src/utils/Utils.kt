@@ -1,4 +1,4 @@
-package src.linkedlist.api
+package src.utils
 
 infix fun String.example(function: () -> Unit) {
     println("-----Example of $this-----")

@@ -2,7 +2,7 @@ package src.linkedlist.main
 
 import src.linkedlist.api.LinkedList
 import src.linkedlist.api.Node
-import src.linkedlist.api.example
+import src.utils.example
 
 fun main() {
     testFunctionLinkedList()

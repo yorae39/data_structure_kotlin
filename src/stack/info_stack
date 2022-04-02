@@ -1,0 +1,55 @@
+STACK:
+Em ciência da computação, uma pilha (stack em inglês) é um tipo abstrato de dado e estrutura de dados
+baseado no princípio de Last In First Out (LIFO), ou seja "o último que entra é o primeiro que sai"
+caracterizando um empilhamento de dados. Pilhas são fundamentalmente compostas por duas operações:
+push (empilhar) que adiciona um elemento no topo da pilha e pop (desempilhar) que remove o último
+elemento adicionado.
+
+Exemplo:
+
+
+                                                                          +------+
+                                                                          |   5  |-------+
+                                                    +------+              +------+       |
+                                                    |   4  |-------+         push        |
+                              +------+              +------+       |                  +------+
+                              |  3   |------+          push        |                  |   4  |
+        +------+              +------+      |                  +------+               +------+
+        |  2   |------+         push        |                  |   3  |               |   3  |
+        +------+      |                 +------+               +------+               +------+
+          push        |                 |  2   |               |   2  |               |   2  |
+                  +------+              +------+               +------+               +------+
+                  |  1   |              |  1   |               |   1  |               |   1  |
+                  +------+              +------+               +------+               +------+
+
+                  +------+
+            +-----|  5   |
+            |     +------+             +------+
+            |       pop        +-------|  4   |
+        +------+               |       +------+               +------+
+        |  4   |               |          pop         +-------|  3   |
+        +------+            +------+                  |       +------+                +------+
+        |  3   |            |  3   |                  |          pop          +-------|  2   |
+        +------+            +------+               +------+                   |       +------+
+        |  2   |            |  2   |               |   2  |                   |         pop
+        +------+            +------+               +------+                +------+
+        |  1   |            |  1   |               |   1  |                |  1   |
+        +------+            +------+               +------+                +------+
+
+
+
+EXERCÍCIOS:
+
+1 - Imprima uma lista encadeada ao contrário sem usar recursão.
+Dada uma lista encadeada, imprima os nós na ordem inversa.
+Você não deve usar recursão para resolver este problema!
+
+2 - Verifique se há parênteses balanceados.
+Dada uma string, verifique se existem caracteres `(` e `)`,
+e retorne `true` se os parênteses na string estiverem balanceados.
+Por exemplo:
+    h((e))llo(world)() // parênteses balanceados
+    (hello world // parênteses não balanceados
+
+
+

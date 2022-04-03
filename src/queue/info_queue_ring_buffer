@@ -1,0 +1,85 @@
+Um buffer circular, fila circular, buffer cíclico ou buffer de anel é uma estrutura de dados que usa um único buffer
+de tamanho fixo como se estivesse conectado de ponta a ponta.
+Essa estrutura se presta facilmente ao buffer de fluxos de dados.
+Assim, um algoritmo de leitura que leia a última posição do buffer e necessite continuar lendo irá retornar ao início
+do buffer e proceder a leitura a partir daí. O mesmo vale para algoritmos de escrita, sendo que a escrita numa
+posição não-vazia provoca a perda do conteúdo original.
+Obs:
+    A memória nunca é criada fisicamente como um anel, geralmente é usada uma representação linear, como é feito abaixo.
+
+Exemplo:
+
+Um buffer circular primeiro começa vazio e de algum comprimento predefinido.
+Por exemplo, este é um buffer de 7 elementos:
+
+
+    +--------+--------+--------+--------+--------+--------+--------+
+    |        |        |        |        |        |        |        |
+    +--------+--------+--------+--------+--------+--------+--------+
+        ^                                                       |
+        |                                                       |
+        +-------------------------------------------------------+
+
+Suponha que um 1 esteja escrito no meio do buffer (o local inicial exato não importa em um buffer circular):
+
+    +--------+--------+--------+--------+--------+--------+--------+
+    |        |        |   1    |        |        |        |        |
+    +--------+--------+--------+--------+--------+--------+--------+
+        ^                                                       |
+        |                                                       |
+        +-------------------------------------------------------+
+
+Então, suponha que mais dois elementos sejam adicionados — 2 e 3 — que são acrescentados após o 1:
+
+    +--------+--------+--------+--------+--------+--------+--------+
+    |        |        |   1    |   2    |   3    |        |        |
+    +--------+--------+--------+--------+--------+--------+--------+
+        ^                                                       |
+        |                                                       |
+        +-------------------------------------------------------+
+
+Se dois elementos forem removidos do buffer, os valores mais antigos dentro do buffer serão removidos.
+Os dois elementos removidos, neste caso, são 1 e 2, deixando o buffer com apenas 3:
+
+    +--------+--------+--------+--------+--------+--------+--------+
+    |        |        |        |        |   3    |        |        |
+    +--------+--------+--------+--------+--------+--------+--------+
+        ^                                                       |
+        |                                                       |
+        +-------------------------------------------------------+
+
+
+Se o buffer tiver 7 elementos, ele estará completamente cheio:
+
+    +--------+--------+--------+--------+--------+--------+--------+
+    |    6   |   7    |   8    |   9    |   3    |   4    |   5    |
+    +--------+--------+--------+--------+--------+--------+--------+
+        ^                                                       |
+        |                                                       |
+        +-------------------------------------------------------+
+
+
+Uma consequência do buffer circular é que quando ele está cheio e uma gravação subsequente é executada,
+ele começa a sobrescrever os dados mais antigos. Neste caso, mais dois elementos — A e B — são adicionados
+e eles substituem os 3 e 4:
+
+    +--------+--------+--------+--------+--------+--------+--------+
+    |    6   |   7    |   8    |   9    |   A    |   B    |   5    |
+    +--------+--------+--------+--------+--------+--------+--------+
+        ^                                                       |
+        |                                                       |
+        +-------------------------------------------------------+
+
+
+Alternativamente, as rotinas que gerenciam o buffer podem evitar sobrescrever os dados e retornar um erro ou
+gerar uma exceção. Se os dados são ou não sobrescritos, é a semântica das rotinas de buffer ou o aplicativo
+que usa o buffer circular.
+Finalmente, se dois elementos forem removidos, o que seria retornado não é 3 e 4, mas 5 e 6, porque A & B
+sobrescreveram o 3 e o 4 gerando o buffer com:
+
+    +--------+--------+--------+--------+--------+--------+--------+
+    |        |   7    |   8    |   9    |   A    |   B    |        |
+    +--------+--------+--------+--------+--------+--------+--------+
+        ^                                                       |
+        |                                                       |
+        +-------------------------------------------------------+

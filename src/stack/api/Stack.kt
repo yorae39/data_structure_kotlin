@@ -20,11 +20,11 @@ class StackImpl<T : Any> : Stack<T> {
         get() = storage.size
 
     override fun toString() = buildString {
-        appendLine("------top------")
+        appendLine("-------top-------")
         storage.asReversed().forEach{
             appendLine("$it")
         }
-        appendLine("----------------")
+        appendLine("-----------------")
     }
 
     override fun push(element: T) {

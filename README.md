@@ -12,7 +12,7 @@ Exemplos de estrutura de dados com a linguagem kotlin
 ### Conteúdo
 - [X] LinkedList
 - [X] Stack
-- [ ] Queue
+- [X] Queue
 - [ ] Builder
 - [ ] Trees
 - [ ] Binary Trees

@@ -1,0 +1,36 @@
+Queue ou fila, é uma estrutura de dados muito similar a Stack (pilha), o que acaba gerando confusão.
+A diferença básica entre elas é a ordem na qual seus itens são consumidos, pois ao contrário da Stack,
+a Queue sempre vai consumir os itens na ordem que foram inseridos.
+Ou seja, o primeiro item da fila será o primeiro a ser consumido, e ao ser consumido é removido do grupo de itens,
+passando então o segundo item para primeiro, terceiro para segundo e assim por diante, até o final da fila.
+A melhor analogia que podemos fazer com esse algoritmo é pensar, literalmente, em uma fila de supermercado,
+banco, casa lotérica e etc.. Onde as pessoas são atendidas por ordem de chegada (FIFO: First In First Out).
+Filas normalmente tem apenas dois métodos, sendo um para adição de novos itens chamado de enqueue, e outro para
+remoção de um item chamado de dequeue.
+
+
+Exemplo:
+
+        +---+
+        |   |
+        |   |
+        |   |
+        |   |
+        +---+       Fim                             Inicio
+          |         +---+   +---+   +---+   +---+   +---+
+          |         |   |   |   |   |   |   |   |   |   |  Dequeue
+          +-------- |   |   |   |   |   |   |   |   |   |  Desenfileirar
+        Enqueue     |   |   |   |   |   |   |   |   |   |--------+
+        Enfileirar  |   |   |   |   |   |   |   |   |   |        |
+                    +---+   +---+   +---+   +---+   +---+        |
+                                                               +---+
+                                                               |   |
+                                                               |   |
+                                                               |   |
+                                                               |   |
+                                                               +---+
+
+EXERCIOS:
+
+1 - Crie uma fila de chamada de pacientes que chame sempre o proximo da fila [FIFO].
+2 - Implemente um método para reverter o conteúdo de uma fila.

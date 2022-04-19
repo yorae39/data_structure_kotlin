@@ -7,6 +7,9 @@ class BinaryNode<T : Any>(var value: T) {
     var leftChild: BinaryNode<T>? = null
     var rightChild: BinaryNode<T>? = null
 
+    val min: BinaryNode<T>
+        get() = leftChild?.min ?: this
+
     private fun diagram(
         node: BinaryNode<T>?,
         top: String = "",
@@ -75,4 +78,5 @@ class BinaryNode<T : Any>(var value: T) {
         leftChild?.traversePreOrderWithNull(visit) ?: visit(null)
         rightChild?.traversePreOrderWithNull(visit)
     }
+
 }

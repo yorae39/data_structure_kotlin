@@ -15,7 +15,7 @@ Exemplos de estrutura de dados com a linguagem kotlin
 - [X] Queue
 - [X] Trees
 - [X] Binary Trees
-- [ ] Binary Search Trees
+- [X] Binary Search Trees
 - [ ] Avl Trees
 - [ ] Trie
 - [ ] Binary Search

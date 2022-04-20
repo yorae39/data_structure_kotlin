@@ -1,7 +1,7 @@
-Na ciência da computação, uma árvore binária de busca (BST), também chamada de árvore binária ordenada ou classificada,
-é uma estrutura de dados de árvore binária enraizada cujos nós internos armazenam uma chave maior que todas as chaves
-na subárvore esquerda do nó e menor que aquelas na subárvore esquerda do nó. sua subárvore direita. A complexidade de
-tempo das operações na árvore de busca binária é diretamente proporcional à altura da árvore.
+Em Ciência da computação, uma árvore binária de busca (ou árvore binária de pesquisa) é uma estrutura de dados
+de árvore binária baseada em nós, onde todos os nós da subárvore esquerda possuem um valor numérico inferior ao
+nó raiz e todos os nós da subárvore direita possuem um valor superior ao nó raiz (esta é a forma padrão, podendo
+as subárvores serem invertidas, dependendo da aplicação).
 
 As árvores de pesquisa binária permitem a pesquisa binária para pesquisa rápida, adição e remoção de itens de dados e
 podem ser usadas para implementar conjuntos dinâmicos e tabelas de pesquisa. Como os nós em um BST são dispostos de tal

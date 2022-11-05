@@ -5,6 +5,7 @@ import src.utils.example
 
 fun main() {
  testAVLTree()
+ testRepetion()
 }
 
 fun testAVLTree() {
@@ -20,5 +21,16 @@ fun testAVLTree() {
         tree.remove(10)
         println(tree)
         println(tree.contains(10))
+    }
+}
+
+fun testRepetion() {
+    "repeated insertions in sequence" example {
+        val tree = AVLTree<Int>()
+
+        (0..14).forEach {
+            tree.insert(it)
+        }
+        print(tree)
     }
 }

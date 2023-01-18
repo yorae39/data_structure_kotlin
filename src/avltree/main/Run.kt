@@ -5,7 +5,7 @@ import src.utils.example
 
 fun main() {
  testAVLTree()
- testRepetion()
+ testRepetition()
 }
 
 fun testAVLTree() {
@@ -24,7 +24,7 @@ fun testAVLTree() {
     }
 }
 
-fun testRepetion() {
+fun testRepetition() {
     "repeated insertions in sequence" example {
         val tree = AVLTree<Int>()
 
